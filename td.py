@@ -1,4 +1,6 @@
 #td template
+import gym
+import numpy as np
 
 V = np.zeros([env.observation_space.n, env.action_space.n]) #initialize your value function
 
