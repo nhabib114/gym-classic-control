@@ -6,11 +6,12 @@ V = np.zeros([env.observation_space.n, env.action_space.n]) #initialize your val
 
 state = env.reset()
 
-while reward != 20
+while not done:
   if np.random.rand() < epsilon:
     action = env.action_space.sample() #select a random action
   else:
-    action = np.argmax(Q[state]) # choose an action according to your custom method
+ #   action = np.argmax(V[state]) # choose an action according to your custom method
+    action = select_action(V[state])
  
 next_state, reward, done, info = env.step(action) #get the next state and reward
  
