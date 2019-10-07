@@ -15,6 +15,6 @@ while not done:
  
 next_state, reward, done, info = env.step(action) #get the next state and reward
  
-# V(state) = V(state) + alpha * (reward + gamma * V(next_state) - V(state)) # update your value/utility function
+# V(state) = V(state) + alpha * (reward + gamma * V(next_state) - V(state)) # update your value function
  
 state = next_state # set the next state
