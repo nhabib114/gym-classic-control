@@ -7,4 +7,4 @@ Value function
 
 Action selection
 
-You should be able to use TD to make your own action-selection function.
+You should be able to use TD with your own action-selection function.
