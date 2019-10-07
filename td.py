@@ -2,6 +2,10 @@
 import gym
 import numpy as np
 
+alpha = None
+gamma = None
+epsilon = None
+
 V = np.zeros([env.observation_space.n, env.action_space.n]) #initialize your value function
 
 state = env.reset()
