@@ -1,4 +1,8 @@
 #td template
+
+class TD:
+  pass
+
 import gym
 import numpy as np
 
