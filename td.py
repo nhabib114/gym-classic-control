@@ -43,3 +43,9 @@ class qLearn(TD):
     def learn(self, state1, action1, reward, state2):
         maxQ = max([self.getQ(state2, a) for a in self.actions])
         self.updateQ(state1, action1, reward, reward + gamma * maxQ)
+
+class expected_sarsa(TD):
+    
+    def learn(self, state1, action1, reward, state2):
+        meanQ = mean([self.getQ(state2, a) for a in self.actions])
+        self.updateQ(state1, action1, reward, reward + gamma * meanQ)
