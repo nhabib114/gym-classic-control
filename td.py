@@ -16,7 +16,7 @@ class TD:
     def learn(self, state1, action1, reward, state2, action2):
         pass
         
-    def chooseAction(self, state):
+    def act(self, state):
         if np.random.rand() < epsilon:
             action = env.action_space.sample()
         else:
@@ -38,7 +38,7 @@ class sarsa(TD):
         nextQ = self.getQ(state2, action2)
         self.updateQ(state1, action1, reward, reward + gamma * nextQ)
 
-class qLearn(TD):
+class q_learn(TD):
     
     def learn(self, state1, action1, reward, state2):
         maxQ = max([self.getQ(state2, a) for a in self.actions])
