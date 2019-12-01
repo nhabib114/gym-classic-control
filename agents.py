@@ -1,6 +1,8 @@
 class TDAgent:
     def __init__(self, actions, epsilon=0.9, alpha=0.9, gamma=0.7):
         self.q = {}
+        self.lastAction = None
+        self.lastState = None
         self.actions = [i for i in range(actions)]
         self.epsilon = epsilon
     
